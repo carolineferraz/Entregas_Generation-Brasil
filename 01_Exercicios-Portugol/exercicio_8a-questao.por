@@ -1,26 +1,21 @@
 programa
 {
-	inclua biblioteca Matematica --> mat
 	
 	funcao inicio()
 	{
-		real a,b,c,r,s,d
+		real custoFabrica,percentagemDistribuidor,percentagemImpostos,custoConsumidor
 
-		escreva("\nInsira o valor de A: ")
-		leia(a)
-		escreva("\nInsira o valor de B: ")
-		leia(b)
-		escreva("\nInsira o valor de C: ")
-		leia(c)
+		escreva("\nInsira o custo de Fábrica: ")
+		leia(custoFabrica)
 
-		r = mat.potencia((a+b),2.0)
-		s = mat.potencia((b+c),2.0)
-		d = (r + s) / 2
+		percentagemDistribuidor = 0.28 * custoFabrica
+		
+		percentagemImpostos = 0.45 * custoFabrica
+		
 
-		escreva("\nO valor de D é: ",mat.arredondar(d,2))
-		
-		
-		
+		custoConsumidor = custoFabrica + percentagemDistribuidor + percentagemImpostos
+
+		escreva("\nO custo do consumidor será: ",(custoConsumidor))
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -28,7 +23,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 77; 
+ * @POSICAO-CURSOR = 433; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
